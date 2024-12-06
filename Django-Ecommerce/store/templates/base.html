@@ -1,0 +1,117 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>booksBD</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+        {% include 'navbar.html' %}
+        {% if messages %}
+            {% for message in messages %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  {{ message }}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+            {% endfor %}
+        {% endif %}
+        
+        {% block content %}
+        {% endblock %}
+
+
+
+
+        <!-- Footer-->
+        <footer style="background-color: #333333;" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo and Contact Section -->
+                    <div class="col-md-3">
+                        <img src="/static/images/logo.png" alt="booksBD Logo" style="width: 100px; height: 100px;">
+                        <p class="text-white">📞 <strong>Hotline:</strong> 16705</p>
+                        <p class="text-white">📠 <a href="mailto:info@booksbd.com" class="text-decoration-none text-white">info@booksbd.com</a></p>
+                        <p class="text-white">🏢 Daffodil International University</p>
+                    </div>
+        
+                    <!-- Explore By Section -->
+                    <div class="col-md-2">
+                        <h5 class="text-white">Explore By</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none text-white">Category</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Author</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Publisher</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Get to Know Us Section -->
+                    <div class="col-md-2">
+                        <h5 class="text-white">Get to Know Us</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none text-white">Contact Us</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">About Us</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Blog</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Policy Section -->
+                    <div class="col-md-2">
+                        <h5 class="text-white">Policy</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none text-white">Terms & Conditions</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Privacy Policy</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">Return Policy</a></li>
+                            <li><a href="#" class="text-decoration-none text-white">FAQ</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Social Media Section -->
+                    <div class="col-md-3">
+                        <h5 class="text-white">Stay Connected With Us</h5>
+                        <div>
+                            <a href="https://facebook.com" class="text-decoration-none" target="_blank" title="Facebook">
+                                <link rel="shortcut icon" href="https://www.facebook.com/favicon.ico" type="image/x-icon">
+                                <img src="https://www.facebook.com/favicon.ico" alt="Facebook" style="width: 32px; margin-right: 8px;">
+                            </a>
+                            <a href="https://youtube.com" class="text-decoration-none" target="_blank" title="YouTube">
+                                <link rel="shortcut icon" href="https://www.youtube.com/favicon.ico" type="image/x-icon">
+                                <img src="https://www.youtube.com/favicon.ico" alt="YouTube" style="width: 32px; margin-right: 8px;">
+                            </a>
+                            <a href="https://twitter.com" class="text-decoration-none" target="_blank" title="Twitter">
+                                <link rel="shortcut icon" href="https://twitter.com/favicon.ico" type="image/x-icon">
+                                <img src="https://twitter.com/favicon.ico" alt="Twitter" style="width: 32px; margin-right: 8px;">
+                            </a>
+                            <a href="https://linkedin.com" class="text-decoration-none" target="_blank" title="LinkedIn">
+                                <link rel="shortcut icon" href="https://www.linkedin.com/favicon.ico" type="image/x-icon">
+                                <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" style="width: 32px; margin-right: 8px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Footer Bottom -->
+                <div class="text-center mt-4">
+                    <p class="m-0 text-white">Copyright &copy; booksBD 2024</p>
+                </div>
+            </div>
+        </footer>
+        
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/scripts.js' %}"></script>
+    </body>
+</html>
